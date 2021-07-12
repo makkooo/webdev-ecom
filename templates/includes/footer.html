@@ -1,0 +1,46 @@
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top">
+	<div class="container">
+		<section class="footer-bottom border-top row">
+			<div class="col-md-4">
+				<p class="text-muted"> &copy 2021 WebDev Ecommerce Group </p>
+			</div>
+			<div class="col-md-4 text-md-center text-muted">
+                <span>Made with <span style="color: #e25555;">&hearts;</span> by GRPD&E BSCS 3-3</span>
+			</div>
+			<div class="col-md-4 text-md-right text-muted">
+				<a href="#" class="facebook-btn"><i class="fab fa-lg fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-lg fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-lg fa-instagram"></i></a>
+			</div>
+		</section>
+	</div><!-- //container -->
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src', $(this).attr("href"));
+		})
+	})
+</script>
+
+<script>
+    const facebookBtn = document.querySelector(".facebook-btn");
+
+    function init(){
+        let postUrl = document.location.href;
+
+        facebookBtn.setAttribute("href",
+        `https://www.facebook.com/sharer.php?u=${postUrl}`
+        );
+    }
+
+    init();
+</script>
+
+</body>
+</html>
